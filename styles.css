@@ -1,0 +1,214 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+header {
+    display: flex;
+    height: 100vh;
+    background: #fff;
+    overflow: hidden;
+}
+.hero-left, .hero-right {
+    flex: 1;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+.hero-left {
+    background: url('https://images.unsplash.com/photo-1547471080-7cc2cae68297?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-left img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.hero-left:hover {
+    transform: scale(1.03);
+}
+.hero-left:hover img {
+    transform: scale(1.1);
+}
+.hero-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f9f1e9;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    color: #4a3c31;
+    margin: 0;
+}
+.hero-text p {
+    font-size: 1.5rem;
+    color: #7d6b5e;
+}
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin: 20px;
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.product-card h3 {
+    margin: 0 0 10px 0;
+    color: #4a3c31;
+    font-size: 1.5rem;
+}
+.product-card .price {
+    display: flex;
+    align-items: baseline;
+    margin: 10px 0;
+    color: #7d6b5e;
+}
+.product-card .price .dollar {
+    font-size: 1.2rem;
+}
+.product-card .price .amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.product-card .description {
+    font-size: 0.9rem;
+    color: #7d6b5e;
+    margin: 10px 0;
+    flex-grow: 1;
+}
+.product-card button {
+    background: #d9a566;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 1.1rem;
+    align-self: flex-end;
+}
+.product-card button:hover {
+    background: #e8b57a;
+    transform: scale(1.05);
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+.form-wrapper {
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden; /* Prevents any overflow from showing scrollbars */
+}
+.form-wrapper iframe {
+    width: 100%;
+    height: 848px; /* Keep this height to match your form's content */
+    scrolling: no; /* Disable scrolling */
+    overflow: hidden; /* Hide any overflow content */
+}
+.social-proof {
+    background: #fafafa;
+    padding: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+}
+.social-proof h2 {
+    color: #4a3c31;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.rotating-bar {
+  display: flex;
+  width: max-content;
+  animation: slide 40s linear infinite;
+}
+div.quote {
+    width:100px;
+}
+.quote {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 350px;
+    padding: 15px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+.quote:hover {
+    transform: scale(1.05);
+}
+.initials-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #d9a566;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.quote-text {
+    font-style: italic;
+    color: #7d6b5e;
+    font-size: 0.95rem;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.values {
+    text-align: center;
+    background: #fafafa;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.values h2 {
+    color: #4a3c31;
+}
+.values p {
+    color: #7d6b5e;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #e8e8e8;
+    color: #4a3c31;
+}
